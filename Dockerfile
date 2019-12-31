@@ -17,5 +17,7 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - \
   && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
   && apt-get update \
   && apt-get upgrade -y \
-  && apt-get install -y build-essential nodejs yarn phantomjs
-
+  && apt-get install -y build-essential nodejs yarn phantomjs \
+  && wget https://chromedriver.storage.googleapis.com/80.0.3987.16/chromedriver_linux64.zip \
+  && unzip chromedriver_linux64.zip \
+  && mv chromedriver /usr/bin/
