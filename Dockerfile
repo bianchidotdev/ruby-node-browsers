@@ -21,3 +21,9 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - \
   && wget https://chromedriver.storage.googleapis.com/79.0.3945.16/chromedriver_linux64.zip \
   && unzip chromedriver_linux64.zip \
   && mv chromedriver /usr/bin/
+
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A6DCF7707EBC211F \
+  && apt-get install -y software-properties-common \
+  && apt-add-repository "deb http://ppa.launchpad.net/ubuntu-mozilla-security/ppa/ubuntu bionic main" \
+  && apt-get update \
+  && apt-get install -y firefox
