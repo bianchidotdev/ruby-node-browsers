@@ -1,4 +1,4 @@
-FROM circleci/ruby:2.6-node-browsers
+FROM circleci/ruby:2.6.5-node-browsers
 
 RUN sudo apt-get update \
   && sudo apt-get upgrade -y \
